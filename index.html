@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>temp</title>
+<style>
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 500px;
+  height: 500px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="wrap wrap01">
+  <img src="sample2.jpg" height="399" width="300" alt="">  
+</div>
+<div class="wrap wrap02">
+  <img src="sample2.jpg" height="399" width="300" alt="">  
+</div>
+
+<!-- <img src="sample2.jpg" height="399" width="300" alt="">   -->
+
+<!-- Scripts Start -->
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./SetCenter.js"></script>
+<script type="text/javascript">
+
+
+$(window).on('load', function(event) {
+
+  var $wrap = $('.wrap01'),
+      $target = $wrap.find('img');
+
+  var c = new gb.SetCenter($wrap,$target,0);
+
+  var $wrap = $('.wrap02'),
+      $target = $wrap.find('img');
+
+  var c2 = new gb.SetCenter($wrap,$target,1);
+
+});
+
+// $(window).on('load', function(event) {
+
+//   function onResize() {
+
+//     var $wrap = $(window),
+//         $target = $('img');
+
+//     var c = new gb.SetCenter($wrap,$target,1);
+
+//   }
+
+//   function setEvents() {
+
+//     $(window).on('resize', onResize);
+
+//   }
+
+//   function main() {
+
+//     setEvents();
+
+//   }
+
+//   main();
+
+// });
+
+</script>
+</body>
+</html>
